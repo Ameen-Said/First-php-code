@@ -26,7 +26,7 @@ $stored_hash = md5("php123"); // Replace this with the actual stored hash value
 if ($pass !== "") {
     $hashedpass = md5($pass);
     if ($hashedpass === $stored_hash) {
-        header("Location: autos.php?name=" . urlencode($_POST['who'] . "pass=" .$_POST['pass']));
+        header("Location: autos.php?name=" . urlencode($_POST['who']));
         error_log("Login success " . $_POST['who']);
         exit();
     } else {
